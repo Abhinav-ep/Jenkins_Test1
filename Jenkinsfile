@@ -38,8 +38,8 @@ pipeline {
                     } catch (Exception e) {
                         echo '❌ Template mismatch. Reverting last commit...'
                         sh '''
-                            git config user.email "jenkins@example.com"
-                            git config user.name "Jenkins"
+                            git config user.email "abhinavsureshep2@gmail.com"
+                            git config user.name "Abhinav-ep"
                             git reset --hard HEAD~1
                             git push origin HEAD --force
                         '''
