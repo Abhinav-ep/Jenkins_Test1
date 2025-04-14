@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Starting process"
+"Starting process"
 run_task
