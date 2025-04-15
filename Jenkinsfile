@@ -39,7 +39,7 @@ pipeline {
                                 git config user.name "Abhinav-ep"
                                 git remote set-url origin https://${GIT_USER}:${GIT_PASS}@github.com/Abhinav-ep/Jenkins_Test1.git
                                 git reset --hard HEAD~1
-                                git push origin HEAD --force
+                                git push origin HEAD:refs/heads/main --force
                             '''
                         }
 
