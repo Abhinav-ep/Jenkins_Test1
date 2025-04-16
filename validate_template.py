@@ -2,8 +2,8 @@ import difflib
 import sys
 import re
 
-TEMPLATE_FILE = 'templates/template1.sh'
-SCRIPT_FILE = 'scripts/script1.sh'
+TEMPLATE_FILE = 'templates/template3.sh'
+SCRIPT_FILE = 'scripts/script3.sh'
 
 # Define a function to clean lines (strip empty lines, remove comments, and replace placeholders)
 def clean_lines(lines, is_template=False):
@@ -18,7 +18,7 @@ def clean_lines(lines, is_template=False):
                 line = re.sub(r'<NUM\d+>', '<NUM>', line)  # Replace all placeholders like <NUM1>, <NUM2>, etc.
             else:
                 # Replace actual values in script with the common placeholder
-                line = re.sub(r'num\d+\s*=\s*\d+', 'num<NUM> = <NUM>', line)  # Replace concrete numbers
+                line = re.sub(r'(\s*=\s*)\d+', r'\1<NUM>', line)  # Replace numbers after '=' with <NUM>
 
             cleaned_lines.append(line)
 
@@ -47,5 +47,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
