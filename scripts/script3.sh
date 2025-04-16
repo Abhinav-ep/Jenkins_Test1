@@ -4,7 +4,7 @@
 
 # Define two variables
 num1=20
-num2=25
+num2=10
 
 # Calculate sum, difference, and product
 sum=$((num1 + num2))
