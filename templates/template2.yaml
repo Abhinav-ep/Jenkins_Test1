@@ -1,0 +1,19 @@
+app:
+  name: <APP_NAME>
+  version: <APP_VERSION>
+
+server:
+  host: <SERVER_HOST>
+  port: <SERVER_PORT>
+
+database:
+  engine: <DB_ENGINE>
+  host: <DB_HOST>
+  port: <DB_PORT>
+  username: <DB_USERNAME>
+  password: <DB_PASSWORD>
+
+features:
+  - <FEATURE_1>
+  - <FEATURE_2>
+  - <FEATURE_3>
