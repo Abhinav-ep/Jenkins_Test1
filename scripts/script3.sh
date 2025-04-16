@@ -1,6 +1,6 @@
 #!/bin/bash
 
-num1=20
+num1=50
 num2=10
 
 sum=$((num1 + num2))
