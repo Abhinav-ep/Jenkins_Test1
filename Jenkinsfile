@@ -20,7 +20,7 @@ pipeline {
 
         stage('Compare With Template') {
             steps {
-                echo '🔍 Comparing script with template...'
+                echo 'Comparing script with template...'
 
                 script {
                     def result = sh(script: 'python3 validate_template.py', returnStatus: true)
@@ -28,9 +28,8 @@ pipeline {
                     if (result != 0) {
                         echo '❌ Template mismatch. Reverting last commit...'
 
-                        // GitHub credentials stored in Jenkins
                         withCredentials([usernamePassword(
-                            credentialsId: 'github-creds',  // You must create this in Jenkins
+                            credentialsId: 'github-creds',
                             usernameVariable: 'GIT_USER',
                             passwordVariable: 'GIT_PASS'
                         )]) {
@@ -43,7 +42,6 @@ pipeline {
                             '''
                         }
 
-                        // Fail the pipeline to skip next stages
                         error("Script does not match the template.")
                     }
                 }
@@ -52,15 +50,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo '🔧 Building project...'
-                // Add your build commands here
+                echo 'Building project...'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo '🚀 Deploying project...'
-                // Add your deployment commands here
             }
         }
     }
