@@ -3,8 +3,8 @@
 # Simple Math Operations Script
 
 # Define two variables
-num1=10
-num2=5
+num1=20
+num2=25
 
 # Calculate sum, difference, and product
 sum=$((num1 + num2))
