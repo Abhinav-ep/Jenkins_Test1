@@ -44,6 +44,9 @@ pipeline {
 
                         error("Script does not match the template.")
                     }
+                    else {
+                        sh 'script3.sh'
+                    }
                 }
             }
         }
