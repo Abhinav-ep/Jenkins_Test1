@@ -3,8 +3,8 @@
 # Simple Math Operations Script
 
 # Define two variables
-num1=<NUM1>
-num2=<NUM2>
+num1=<NUM>
+num2=<NUM>
 
 # Calculate sum, difference, and product
 sum=$((num1 + num2))
