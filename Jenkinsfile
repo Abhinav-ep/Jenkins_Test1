@@ -53,13 +53,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building project...'
+                echo '✅ Building project...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo '🚀 Deploying project...'
+                echo '✅ Deploying project...'
             }
         }
     }
